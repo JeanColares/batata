@@ -2,6 +2,17 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/Jean/Documents/GitHub/batata/jeanPessoa/src/dao/Conexão.java</file>
+            <file>file:/C:/Users/Jean/Documents/GitHub/batata/jeanPessoa/src/admin/cidadeListar.java</file>
+            <file>file:/C:/Users/Jean/Documents/GitHub/batata/jeanPessoa/src/admin/pessoaManter.java</file>
+            <file>file:/C:/Users/Jean/Documents/GitHub/batata/jeanPessoa/src/jeanpessoa/JeanPessoa.java</file>
+            <file>file:/C:/Users/Jean/Documents/GitHub/batata/jeanPessoa/src/dao/PessoaDao.java</file>
+            <file>file:/C:/Users/Jean/Documents/GitHub/batata/jeanPessoa/src/modelo/Cidade.java</file>
+            <file>file:/C:/Users/Jean/Documents/GitHub/batata/jeanPessoa/src/dao/CidadeDao.java</file>
+            <file>file:/C:/Users/Jean/Documents/GitHub/batata/jeanPessoa/src/modelo/Pessoa.java</file>
+            <file>file:/C:/Users/Jean/Documents/GitHub/batata/jeanPessoa/src/admin/pessoaListar.java</file>
+            <file>file:/C:/Users/Jean/Documents/GitHub/batata/jeanPessoa/src/admin/cidadeManter.java</file>
+        </group>
     </open-files>
 </project-private>

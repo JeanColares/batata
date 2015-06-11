@@ -46,6 +46,7 @@ public class pessoaManter extends javax.swing.JFrame {
         botaoConsultar = new javax.swing.JButton();
         botaoLimpar = new javax.swing.JButton();
         botaoListagem = new javax.swing.JButton();
+        Atualizar = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -158,20 +159,29 @@ public class pessoaManter extends javax.swing.JFrame {
             }
         });
 
+        Atualizar.setText("ATUALIZAR");
+        Atualizar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AtualizarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(35, 35, 35)
+                .addContainerGap()
                 .addComponent(botaoCad)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
+                .addGap(39, 39, 39)
                 .addComponent(botaoExcluir)
-                .addGap(58, 58, 58)
+                .addGap(18, 18, 18)
                 .addComponent(botaoConsultar)
-                .addGap(37, 37, 37)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addComponent(Atualizar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(botaoLimpar, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28))
+                .addGap(21, 21, 21))
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(215, 215, 215)
                 .addComponent(botaoListagem)
@@ -185,7 +195,8 @@ public class pessoaManter extends javax.swing.JFrame {
                     .addComponent(botaoCad)
                     .addComponent(botaoExcluir)
                     .addComponent(botaoConsultar)
-                    .addComponent(botaoLimpar))
+                    .addComponent(botaoLimpar)
+                    .addComponent(Atualizar))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
                 .addComponent(botaoListagem)
                 .addContainerGap())
@@ -487,6 +498,34 @@ public class pessoaManter extends javax.swing.JFrame {
         tela.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_botaoListagemActionPerformed
 
+    private void AtualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AtualizarActionPerformed
+        // TODO add your handling code here:
+        if(txtCod.getText().isEmpty())
+        {
+            JOptionPane.showMessageDialog(null, "Registro não informado");
+        }
+        else
+        {Pessoa p = new Pessoa();
+        p.setCodigo(Integer.parseInt(txtCod.getText()));
+        p.setNome(txtNome.getText());
+        p.setSexo(cboSexo.getSelectedItem().toString());
+        
+        PessoaDao dao = new PessoaDao();
+        boolean deucerto;
+        deucerto = dao.atualizar(p);
+        if(deucerto == true)
+        {
+            JOptionPane.showMessageDialog(null, "Registro cadastrado com sucesso");
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(null, "Erro ao alteral cadastro");
+        }
+        lista = dao.listar();
+        
+        }
+    }//GEN-LAST:event_AtualizarActionPerformed
+
     public static void main(String args[]) {
        
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -519,6 +558,7 @@ public class pessoaManter extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Atualizar;
     private javax.swing.JButton botaoAnterior;
     private javax.swing.JButton botaoCad;
     private javax.swing.JButton botaoConsultar;
