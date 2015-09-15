@@ -1,0 +1,49 @@
+body
+{
+	font-family: tahoma;
+	background-color:red;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 30px;
+	margin-top: 30px;
+}
+.chiquinha
+{
+	color:green;
+}
+.madruga
+{
+	color:blue;
+}
+.cabecalho
+{
+	font-size:15px;
+	color:silver;
+	background-color: green;
+	text-align:right;
+	font-family: italic;
+	text-decoration: underline;
+}
+
+h1
+{
+	font-size:50px;
+	color: silver;
+	background-color:green;
+	border-width: 2px 5px 3px 6px; 
+    border-style: dashed dotted; 
+    border-color: red;
+    padding: 20px;
+	
+}
+h2
+{
+	font-size: 35px;
+	color: silver;
+	background-color: dark green;
+	font-family: italic;
+}
+p{
+	font-family:justify;
+	font-size: 20px;
+}

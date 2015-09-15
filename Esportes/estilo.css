@@ -1,0 +1,32 @@
+body
+{
+	font-type: arial;
+	color: red;
+	background-color:gray;
+}
+p
+{
+	font-family: justify;
+	font-size: 25px;
+	margin-left: 5px;
+	margin-top; 10px;
+	
+}
+title
+{
+	text-transform: uppercase;
+	font-family: right;
+	font-size: 30px;
+}
+span.cbf
+{
+	color: yellow;
+}
+.gremio{
+	color:blue;
+}
+.inter
+{
+	color:red;
+	font-style: italic;
+}
